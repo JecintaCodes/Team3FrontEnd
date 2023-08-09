@@ -1,11 +1,39 @@
 import styled from "styled-components"
-// import InputEmoji from "react-input-emoji";
+import React, { useState } from "react";
+import InputEmoji from "react-input-emoji";
+
+//  export default function Example() {
+//   const [input, setInput] = useState("");
+
+//   function handleOnEnter(input: any) {
+//     console.log("enter", input);
+//   }
+
+//   return (
+//     <InputEmoji
+//       value={input}
+//       onChange={setInput}
+//       cleanOnEnter
+//       onEnter={handleOnEnter}
+//       placeholder="Type a message"
+//     />
+//   );
+// }
+
 
 
 
 const Task = () =>{
+    const [input, setInput] = useState("");
+
+    function handleOnEnter(input: any) {
+      console.log("enter", input);
+    }
+
+    
+    
     return(
-        <div>
+                <div>
             <Container>
                 <Main>
                     <CardHolder>
@@ -19,7 +47,13 @@ const Task = () =>{
                             </ButtonHolder>
                         </Card>
                         <InputHolder>
-                        <Input/>
+                        
+                        <InputEmoji 
+                           value={input}
+                           onChange={setInput}
+                           cleanOnEnter
+                           onEnter={handleOnEnter}
+                           placeholder="Type a message"/>
                         </InputHolder>
 
                     </CardHolder>
@@ -32,7 +66,7 @@ const Task = () =>{
 export default Task
 
 
-const Input = styled.div``;
+// const InputEmoji = styled.input``;
 const InputHolder = styled.div``;
 const Button = styled.div``;
 const ButtonHolder = styled.div``;
