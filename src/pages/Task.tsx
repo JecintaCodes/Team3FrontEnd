@@ -1,4 +1,5 @@
 import styled from "styled-components"
+// import InputEmoji from "react-input-emoji";
 
 
 
@@ -10,13 +11,16 @@ const Task = () =>{
                     <CardHolder>
                         <Card>
                             <Avatar></Avatar>
-                            <Name></Name>
+                            <Name>Jecinta Ugochi</Name>
                             <Work></Work>
                             <Min></Min>
                             <ButtonHolder>
                                 <Button>Delete</Button>
                             </ButtonHolder>
                         </Card>
+                        <InputHolder>
+                        <Input/>
+                        </InputHolder>
 
                     </CardHolder>
                 </Main>
@@ -28,6 +32,8 @@ const Task = () =>{
 export default Task
 
 
+const Input = styled.div``;
+const InputHolder = styled.div``;
 const Button = styled.div``;
 const ButtonHolder = styled.div``;
 const Min = styled.div``;
