@@ -9,7 +9,8 @@ export const SignUpUser = async(data: any) =>{
  } 
  return await axios.post(`${url}/register-user`, data, config).then((res: any)=>{
 
-    return res.data.data
+    // return res.data.data
+    console.log(res)
  }) 
 
     } catch (error) {

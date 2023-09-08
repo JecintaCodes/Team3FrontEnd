@@ -1,9 +1,9 @@
-import React from 'react';
+// import React from 'react';
 import { RouterProvider } from 'react-router-dom';
 import { mainRoute } from './Router/mainRoute';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { PersistGate } from 'redux-persist/integration/react';
-import { persistStore } from 'redux-persist';
+import  persistStore  from 'redux-persist/es/persistStore';
 import { store } from './global/Store';
 import { Provider } from 'react-redux';
 
@@ -14,11 +14,11 @@ let persist = persistStore(store)
 const App = () => {
   return (
     <div>
-      <Provider store={store}>
+       <Provider store={store}>  
       <PersistGate loading={null} persistor={persist}>
-      <QueryClientProvider client={client}>
+       <QueryClientProvider client={client}>
       <RouterProvider router={mainRoute}/>
-      </QueryClientProvider>
+      </QueryClientProvider> 
       </PersistGate> 
       </Provider>
     </div>

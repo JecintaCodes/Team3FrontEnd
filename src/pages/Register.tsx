@@ -48,16 +48,16 @@ const Register = ()=>{
 
 
         const onSubmit = handleSubmit(async(data:any)=>{
-            const {userName, email, password, ConfirmPassword}= data
+            const {userName, email, password}= data
             const formData = new FormData()
 
             formData.append("name", userName)
             formData.append("email", email)
             formData.append("password", password)
-            formData.append("Image", avatar)
+            formData.append("avatar", avatar)
        
             SignUpUser(formData).then(()=>{
-                navigate("/sign-in")
+                // navigate("/sign-in")
             })
         })
 
